@@ -114,7 +114,7 @@ def display_main_content() -> None:
 def display_sidebar_content() -> None:
     """Displays headers and footer content in the sidebar."""
     st.sidebar.markdown(
-        "<h2 style='text-align: center;'>Jam with AI</h2>", unsafe_allow_html=True
+        "<h2 style='text-align: center;'>Bikram's Chatbot</h2>", unsafe_allow_html=True
     )
     st.sidebar.markdown(
         "<h4 style='text-align: center;'>Your Conversational Platform</h4>",
@@ -123,7 +123,7 @@ def display_sidebar_content() -> None:
     st.sidebar.markdown(
         """
         <div class="footer-text">
-            © 2024 Jam with AI
+            RAG System
         </div>
         """,
         unsafe_allow_html=True,
@@ -134,6 +134,5 @@ def display_sidebar_content() -> None:
 # Main execution
 if __name__ == "__main__":
     apply_custom_css()
-    display_logo("images/jamwithai_logo.png")
     display_sidebar_content()
     display_main_content()
