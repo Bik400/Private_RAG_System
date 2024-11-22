@@ -142,7 +142,7 @@ def render_upload_page() -> None:
 
                 file_path = save_uploaded_file(file)
                 reader = PdfReader(file_path)
-                text = "".join([page.extract_text()] for page in reader.pages)
+                text = "".join([page.extract_text() for page in reader.pages])
                 chunks = chunk_text(text, chunk_size=TEXT_CHUNK_SIZE, overlap=100)
                 embeddings = generate_embeddings(chunks)
 
