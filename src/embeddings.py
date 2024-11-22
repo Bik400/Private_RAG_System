@@ -36,6 +36,6 @@ def generate_embeddings(chunks: List[str]) -> List[np.ndarray[Any,Any]]:
     """
 
     model = get_embedding_model()
-    embeddings = [np.aray(model.encode(chunk)) for chunk in chunks]
+    embeddings = [np.array(model.encode(chunk)) for chunk in chunks]
     logger.info(f"Generated embeddings for {len(chunks)} text chunks.")
     return embeddings
